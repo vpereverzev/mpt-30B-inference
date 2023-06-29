@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 # Проверка версии Python и pip
 RUN python3 --version && pip --version
 
-COPY requirements.txt /app/requirements.txt
+COPY . /app
 
 # Используем python3 для установки зависимостей
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
